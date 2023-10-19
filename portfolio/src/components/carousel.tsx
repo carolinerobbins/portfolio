@@ -1,11 +1,10 @@
-'use client'
-import { useState } from 'react'
-
-import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
+"use client";
+import { useState } from "react";
+import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
+import Image from "next/image";
 
 export default function Carousel() {
   const [current, setCurrent] = useState(0);
-  const length = 3; // Number of slides you have
 
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
@@ -15,20 +14,65 @@ export default function Carousel() {
     setCurrent(current === 0 ? length - 1 : current - 1);
   };
 
+  const projects = [
+    {
+      title: "FreshFeasts",
+      description: "A meal delivery service",
+      techStack: ["React", "Node.js", "MongoDB"],
+      image: "/FreshFeasts.gif", // Path to image
+      isGif: true,
+    },
+    {
+      title: "TravelSwipe",
+      description: "Swipe your way to a perfect trip",
+      techStack: ["React Native", "TypeScript", "AWS"],
+      image: "/travelswipe.jpg", // Path to image
+    },
+  ];
+
+  const length = projects.length;
+
   return (
     <section className="relative flex flex-col items-center justify-center">
-      <FaArrowAltCircleLeft className="absolute left-4 z-10 text-4xl cursor-pointer" onClick={prevSlide} />
-      <FaArrowAltCircleRight className="absolute right-4 z-10 text-4xl cursor-pointer" onClick={nextSlide} />
+      <FaArrowAltCircleLeft
+        className="absolute left-4 z-10 text-4xl cursor-pointer"
+        onClick={prevSlide}
+      />
+      <FaArrowAltCircleRight
+        className="absolute right-4 z-10 text-4xl cursor-pointer"
+        onClick={nextSlide}
+      />
 
-      {/* Replace the divs below with your project info */}
-      {Array.from({ length }).map((_, index) => (
+      {projects.map((project, index) => (
         <div
-          className={`opacity-0 transition-opacity duration-300 ease-in-out ${index === current ? 'opacity-100' : ''}`}
+          className={`opacity-0 transition-opacity duration-300 ease-in-out ${
+            index === current ? "opacity-100" : ""
+          }`}
           key={index}
         >
           {index === current && (
-            <div className="text-4xl font-bold">
-              Project {index + 1}
+            <div className="flex flex-col items-center">
+              <h3 className="text-4xl font-bold mt-4">{project.title}</h3>
+              {project.isGif ? (
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  width={300}
+                  height={200}
+                />
+              ) : (
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  width={300}
+                  height={200}
+                />
+              )}
+
+              <p className="text-lg mt-2">{project.description}</p>
+              <p className="text-sm mt-1">
+                Tech Stack: {project.techStack.join(", ")}
+              </p>
             </div>
           )}
         </div>

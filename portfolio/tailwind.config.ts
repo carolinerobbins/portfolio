@@ -20,6 +20,9 @@ const config: Config = {
         'green-pear': '#B4D330',
         'blustery-blue': '#D8DFE9',
       },
+      fontFamily: {
+        'kanit': ['Kanit', 'sans-serif'],
+      },
     },
   },
   plugins: [],
