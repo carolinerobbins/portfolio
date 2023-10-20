@@ -23,6 +23,9 @@ const config: Config = {
       fontFamily: {
         'kanit': ['Kanit', 'sans-serif'],
       },
+      spacing: {
+        'scroll-offset': '60px', // you can call it whatever you want
+      },
     },
   },
   plugins: [],

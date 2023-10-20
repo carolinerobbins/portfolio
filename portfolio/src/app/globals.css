@@ -25,3 +25,10 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.tawney-travels-bg {
+  background-image: url('/tawney_travels_main.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}

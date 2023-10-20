@@ -1,81 +1,22 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import Image from "next/image";
-import Head from 'next/head';
-import Carousel from "../components/carousel";
-import { SiGithub } from "react-icons/si";
+import Link from "next/link";
+import { SiGithub, SiLinkedin, SiTiktok, SiInstagram } from "react-icons/si";
+import About from "./about/page";
+import Header from '../components/header';
 
 export default function Home() {
   return (
-    <main className="flex flex-col min-h-screen p-12 bg-blustery-blue">
-      {/* Header */}
-      <header className="flex justify-between items-center w-full mb-12">
-        {/* Name */}
-        <h1 className="text-4xl font-bold text-murky-teal">Caroline Robbins</h1>
-        {/* Menu */}
-        <nav className="text-lg text-murky-teal">
-          <ul className="flex space-x-8">
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#services">Services</a>
-            </li>
-            <li>
-              <a href="#experience">Experience</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-
+    <main className="flex flex-col min-h-screen">
+      <div className="tawney-travels-bg">
+      <Header />
+      </div>
       {/* Content */}
-      <div className="flex flex-col items-start w-full space-y-12">
-        {/* About Section */}
-        <section id="about">
-          <h2 className="text-3xl font-extrabold mb-4 text-murky-teal">
-            About Me
-          </h2>
-          <div className="flex relative items-center">
-            <div className="mr-4">
-              <p className="text-lg text-gray-800 mb-2">
-                Hey there! I&apos;m Caroline, a seasoned professional in travel
-                tech and software development. With a decade of industry
-                experience under my belt, I&apos;ve worn many hats — from
-                managing accounts at leading companies like Expedia and Airbnb,
-                to diving deep into the world of software development.
-              </p>
-              <p className="text-lg text-gray-800 mb-2">
-                Ever since I was a child, inspired by shows like &quot;Great
-                Hotels,&ldquo; I knew I was destined for the travel industry.
-                From mimicking TV hosts on family vacations to pursuing formal
-                education at the Hotel School at Cornell, my journey has been
-                one for the books (or perhaps a travel blog).
-              </p>
-              <p className="text-lg text-gray-800 mb-2">
-                I&apos;m proficient in TypeScript, React, React Native, Python,
-                AWS, and databases (SQL & NoSQL). But my tech skills aren&apos;t
-                the only thing that defines me. My knack for team collaboration,
-                project management, and communication helps me create innovative
-                solutions that enhance user experiences and tackle real-world
-                challenges.
-              </p>
-            </div>
-            <div className="rounded-full overflow-hidden">
-              <Image
-                src="/trevi_fountain.jpg" // Route to the image file
-                alt="Trevi Fountain" // Alt tag
-                width={750} // Desired width
-                height={750} // Desired height
-              />
-            </div>
-          </div>
-        </section>
-
+      <div className="flex flex-col items-start w-full space-y-12 p-12 bg-blustery-blue">
+        
         {/* Services Section */}
-        <section id="services" className="w-full">
+        <section id="services" className="w-full scroll-offset">
           <h2 className="text-3xl font-extrabold mb-4 text-murky-teal">
             Services
           </h2>
@@ -112,6 +53,7 @@ export default function Home() {
           <h2 className="text-3xl font-extrabold mb-4 text-murky-teal">
             Experience
           </h2>
+          <hr className="mb-4 border-murky-teal border-2" />
           <div className="flex">
             <img
               src="./FreshFeasts.gif"
@@ -166,8 +108,9 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <hr className="mt-4 border-murky-teal border-2" />
           <div className="flex mt-4">
-          <img
+            <img
               src="./bucketlist.gif"
               alt="BucketList"
               width={200}
@@ -196,12 +139,13 @@ export default function Home() {
                 their bucket list, along with key flight information that can
                 help them make a decision on the right destination for the type
                 of trip. Users can filter by nonstop flights, best seasons to
-                visit, and trip length. BucketList leverages the Amadeus API
-                for flight informaiton.
+                visit, and trip length. BucketList leverages the Amadeus API for
+                flight informaiton.
               </p>
               <p className="text-gray-800 mb-2">
                 The Explorer Map allows users to see places they have been and
-                where they want to go! BucketList leverages the Google Maps API for maps.
+                where they want to go! BucketList leverages the Google Maps API
+                for maps.
               </p>
               <h3 className="text-xl font-bold text-blue-lagoon mb-2">
                 Tech Stack
@@ -224,6 +168,69 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <hr className="mt-4 border-murky-teal border-2" />
+          <div className="flex mt-4">
+            <div>
+              <h2 className="text-2xl font-extrabold text-blue-lagoon mb-2 underline">
+                {" "}
+                Atelier Ecommerce Site{" "}
+              </h2>
+              <p className="text-gray-800 mb-2">
+                {" "}
+                Atelier E-Commerce is an industry-standard e-commerce web page.
+                I developed the product overview frontend and the reviews
+                service backend.
+              </p>
+              <p className="text-gray-800 mb-2">
+                The product overview is crafted to catch the user&apos;s
+                attention and provide a smooth scrolling experience for
+                reviewing the product&apos;s images. It maintains
+                high-resolution images and offers expansion and magnification
+                features, allowing users to confidently select their preferred
+                size, color, and style.
+              </p>
+              <p className="text-gray-800 mb-2">
+                The backend reviews service leverages 3 EC2 microinstances and
+                NGINX round robin load-balancing to serve up to 1500 client
+                requests per second.{" "}
+              </p>
+              <h3 className="text-xl font-bold text-blue-lagoon mb-2">
+                Tech Stack
+              </h3>
+              <p className=" text-gray-800 mb-2">
+                {" "}
+                JavaScript, React, TailwindCSS, PostgreSQL, Node.js, Express,
+                Axios, AWS, Nginx
+              </p>
+              <div className="flex">
+                <a
+                  href="https://github.com/carolinerobbins/AtelierEcommerce"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center text-blue-lagoon font-bold hover:underline"
+                >
+                  <SiGithub className="text-xl mr-2" />
+                  Frontend
+                </a>
+                <a
+                  href="https://github.com/carolinerobbins/atelier-reviews-api"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center text-blue-lagoon font-bold ml-2 hover:underline"
+                >
+                  <SiGithub className="text-xl mr-2" />
+                  Reviews API
+                </a>
+              </div>
+            </div>
+            <img
+              src="./atelier.gif"
+              alt="Atelier E-Commerce"
+              width={600}
+              height={200}
+            />
+          </div>
+          <hr className="mt-4 border-murky-teal border-2" />
         </section>
 
         {/* Contact Section */}
@@ -231,7 +238,48 @@ export default function Home() {
           <h2 className="text-3xl font-extrabold mb-4 text-murky-teal">
             Contact
           </h2>
-          <p>How to reach you.</p>
+          <a
+            href="mailto:caroline.tawney@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center text-xl mb-4 text-blue-lagoon hover:underline"
+          >
+            caroline.tawney@gmail.com
+          </a>
+          <div className="flex">
+            <a
+              href="https://www.linkedin.com/in/robbinscaroline/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center text-3xl mr-2 text-blue-lagoon hover:underline"
+            >
+              <SiLinkedin />
+            </a>
+            <a
+              href="https://github.com/carolinerobbins"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center text-3xl mr-2 text-blue-lagoon hover:underline"
+            >
+              <SiGithub />
+            </a>
+            <a
+              href="https://www.tiktok.com/@tawneytravels?lang=en"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center text-3xl mr-2 text-blue-lagoon hover:underline"
+            >
+              <SiTiktok />
+            </a>
+            <a
+              href="https://www.instagram.com/tawneytravels/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center text-3xl mr-2 text-blue-lagoon hover:underline"
+            >
+              <SiInstagram />
+            </a>
+          </div>
         </section>
       </div>
     </main>
