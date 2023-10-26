@@ -9,9 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'parallax': 'url("../portfolio/public/tawney_travels_main.png")'
       },
       colors: {
         'murky-teal': '#022831',
@@ -22,9 +20,6 @@ const config: Config = {
       },
       fontFamily: {
         'kanit': ['Kanit', 'sans-serif'],
-      },
-      spacing: {
-        'scroll-offset': '60px', // you can call it whatever you want
       },
     },
   },

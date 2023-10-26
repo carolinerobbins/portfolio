@@ -8,7 +8,6 @@ export default function Services() {
         <h1 className="text-murky-teal text-4xl font-extrabold mb-4">
           Services
         </h1>
-        {/* Who I Am */}
         <div className="mb-8">
           <h2 className="text-murky-teal text-2xl font-semibold text-custom-olive mb-2">
             Web Development
@@ -16,18 +15,18 @@ export default function Services() {
           <p className="text-lg text-gray-800 mb-2">
             Need a slick, user-friendly website for your hospitality business?
             Let&apos;s chat! I specialize in creating compelling web experiences
-            that convert visitors into customers. 
+            that convert visitors into customers.
           </p>
           <h3 className="text-murky-teal text-2xl font-semibold text-custom-olive mb-2">
-            Hotel & Vacation Rental Consulting
+            Hospitality Consulting
           </h3>
           <p className="text-lg text-gray-800 mb-2">
-            With 5 years at Expedia and 3 years at Airbnb, I&apos;ve got the
+            With nearly a decade of experience at Expedia and Airbnb, I&apos;ve got the
             insider perspective on what it takes to excel in this space. If
             you&apos;re a hotel looking to transition into the vacation rental
             market, or an Airbnb host looking to optimize, I&apos;m your go-to
             expert. My expertise is pricing and revenue management, but I can
-            also support marketing, content, and social media.
+            also support marketing, content, social media, and technology recommendations.
           </p>
           <h3 className="text-murky-teal text-2xl font-semibold text-custom-olive mb-2">
             Travel Planning
