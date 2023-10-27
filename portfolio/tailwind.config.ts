@@ -15,8 +15,8 @@ const config: Config = {
         'murky-teal': '#022831',
         'blue-lagoon': '#04566E',
         'pastel-green': '#689368',
-        'green-pear': '#B4D330',
         'blustery-blue': '#D8DFE9',
+        'deep-pink' : '#B84A6e'
       },
       fontFamily: {
         'kanit': ['Kanit', 'sans-serif'],

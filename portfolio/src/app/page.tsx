@@ -136,11 +136,12 @@ export default function Home() {
             <h2 className="text-3xl font-extrabold mb-4 text-murky-teal">
               Contact
             </h2>
+            <p className="text-murky-teal text-xl">Interested in working together? Please reach out via email.</p>
             <a
               href="mailto:caroline.tawney@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center text-xl mb-4 text-murky-teal hover:underline"
+              className="flex items-center text-xl mb-4 text-deep-pink hover:underline"
             >
               caroline.tawney@gmail.com
             </a>
