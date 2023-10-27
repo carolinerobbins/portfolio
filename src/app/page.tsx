@@ -131,12 +131,12 @@ export default function Home() {
           </section>
           <section
             id="contact"
-            className="bg-gray-100 bg-opacity-80 p-10 m-10 rounded-lg shadow-md mb-[75vh] snap-center"
+            className="bg-gray-100 bg-opacity-80 p-10 m-10 rounded-lg shadow-md mb-[75vh] snap-center w-4/12"
           >
             <h2 className="text-3xl font-extrabold mb-4 text-murky-teal">
               Contact
             </h2>
-            <p className="text-murky-teal text-xl">Interested in working together? Please reach out via email.</p>
+            <p className="text-murky-teal text-xl">Interested in working together?</p>
             <a
               href="mailto:caroline.tawney@gmail.com"
               target="_blank"
